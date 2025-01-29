@@ -29,7 +29,7 @@
                     </div>
                     <div class="flex flex-col gap-[2px]">
                         <h3 class="font-semibold">{{ $category->name }}</h3>
-                        <p class="text-sm text-ngekos-grey">{{ number_format($category->price )}} Kos</p>
+                        <p class="text-sm text-ngekos-grey">{{ number_format($category->boardingHouses->count() )}} Kos</p>
                     </div>
                 </div>
             </a>
@@ -237,7 +237,7 @@
                 </div>
                 <div class="flex flex-col gap-[2px]">
                     <h3 class="font-semibold">{{ $item->name }}</h3>
-                    <p class="text-sm text-ngekos-grey">1,304 Kos</p>
+                    <p class="text-sm text-ngekos-grey">{{ number_format($item->boardingHouses->count())}} Kos</p>
                 </div>
             </div>
         </a>
