@@ -1,0 +1,1 @@
+<img src="{{ url('https://image.pngaaa.com/691/4622691-middle.png')}}" class="h-16" alt="" />

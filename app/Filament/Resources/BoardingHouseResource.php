@@ -82,10 +82,10 @@ class BoardingHouseResource extends Resource
         return $table
             ->columns([
                 ImageColumn::make('thumbnail'),
-                TextColumn::make('name'),
-                TextColumn::make('city.name'),
-                TextColumn::make('category.name'),
-                TextColumn::make('price'),
+                TextColumn::make('name')->searchable(),
+                TextColumn::make('city.name')->searchable(),
+                TextColumn::make('category.name')->searchable(),
+                TextColumn::make('price')->formatStateUsing(fn($state) => 'Rp ' . number_format($state, 0, ',', '.')),
             ])
             ->filters([
                 //
